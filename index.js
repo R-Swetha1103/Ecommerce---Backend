@@ -13,13 +13,14 @@ const app = express();
 // Load environment variables
 dotenv.config();
 
-// Set the port
+// Set the port (use Render's dynamic port if available)
 const PORT = process.env.PORT || 5001;
 
 // Middleware
 // CORS configuration
 const allowedOrigins = [
-  "https://sparkly-truffle-d4c753.netlify.app/", // Local development frontend
+  "https://sparkly-truffle-d4c753.netlify.app", // Local development frontend
+  "https://ecommerce-backend-0t7k.onrender.com", // Add your deployed backend URL
 ];
 
 const corsOptions = {
